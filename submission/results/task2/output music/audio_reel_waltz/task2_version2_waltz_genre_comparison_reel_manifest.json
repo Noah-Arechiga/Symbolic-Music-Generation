@@ -1,0 +1,71 @@
+{
+  "genre": "waltz",
+  "entries": [
+    {
+      "label": "Real Nottingham waltz reference",
+      "model": "reference_input",
+      "midi": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/real_waltz_reference.mid",
+      "abc": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/real_waltz_reference.abc",
+      "prediction": "waltz",
+      "stats": {
+        "notes": 69,
+        "duration": 45.94558785,
+        "pitch_range": 17
+      },
+      "narration": "New genre comparison reel: waltz. First, here is a real Nottingham waltz reference input. The classifier prediction is waltz. It has 69 notes."
+    },
+    {
+      "label": "Markov Baseline",
+      "model": "markov_baseline",
+      "midi": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/markov_baseline_waltz_000.mid",
+      "abc": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/markov_baseline_waltz_000.abc",
+      "prediction": "hornpipe",
+      "stats": {
+        "notes": 58,
+        "duration": 26.435424946875003,
+        "pitch_range": 21
+      },
+      "narration": "Model: Markov Baseline. Target genre: waltz. Classifier prediction: hornpipe. Generated file: markov_baseline_waltz_000.mid. Here is the generated music."
+    },
+    {
+      "label": "Scratch Transformer",
+      "model": "scratch_transformer",
+      "midi": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/scratch_transformer_waltz_000.mid",
+      "abc": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/scratch_transformer_waltz_000.abc",
+      "prediction": "hornpipe",
+      "stats": {
+        "notes": 71,
+        "duration": 40.6955952,
+        "pitch_range": 17
+      },
+      "narration": "Model: Scratch Transformer. Target genre: waltz. Classifier prediction: hornpipe. Generated file: scratch_transformer_waltz_000.mid. Here is the generated music."
+    },
+    {
+      "label": "Gpt2 Finetuned",
+      "model": "gpt2_finetuned",
+      "midi": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/gpt2_finetuned_waltz_000.mid",
+      "abc": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/gpt2_finetuned_waltz_000.abc",
+      "prediction": "waltz",
+      "stats": {
+        "notes": 64,
+        "duration": 53.77166385,
+        "pitch_range": 10
+      },
+      "narration": "Model: Gpt2 Finetuned. Target genre: waltz. Classifier prediction: waltz. Generated file: gpt2_finetuned_waltz_000.mid. Here is the generated music."
+    },
+    {
+      "label": "Vae",
+      "model": "vae",
+      "midi": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/vae_waltz_000.mid",
+      "abc": "/Users/abhishekdhaka/third quarter/253/Assignment2/projec2/kaggle_task2_v2_exact/task2_version2/runs/medium/audio_reel_waltz/source/vae_waltz_000.abc",
+      "prediction": "hornpipe",
+      "stats": {
+        "notes": 50,
+        "duration": 26.1521373,
+        "pitch_range": 29
+      },
+      "narration": "Model: Vae. Target genre: waltz. Classifier prediction: hornpipe. Generated file: vae_waltz_000.mid. Here is the generated music."
+    }
+  ],
+  "duration_seconds": 271.925
+}

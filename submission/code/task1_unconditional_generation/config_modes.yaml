@@ -1,0 +1,150 @@
+modes:
+  smoke:
+    description: "Fast environment and pipeline check."
+    n_generate: 2
+    max_test_tunes: 20
+    run_pretrained: true
+    quality_filter:
+      enabled: false
+      candidate_multiplier: 1
+      min_note_count: 40
+      min_pitch_range: 12
+      min_unique_pitches: 6
+    markov:
+      generate_max_len: 500
+      temperature: 0.9
+    lstm:
+      epochs: 1
+      hidden: 128
+      layers: 1
+      batch_size: 64
+      seq_len: 128
+      train_stride: 128
+      eval_stride: 16
+      lr: 0.002
+      generate_max_len: 600
+      temperature: 0.9
+    gpt2:
+      finetune_n: 5
+      epochs: 2
+      max_len: 128
+      batch_size: 1
+      grad_accum: 4
+      lr: 5.0e-5
+      generate: true
+      generate_max_new_tokens: 300
+      temperature: 0.9
+      top_p: 0.95
+      top_k: 50
+    tunesformer:
+      n_generate: 2
+      max_patch: 64
+      top_p: 0.8
+      top_k: 8
+      temperature: 1.0
+    melodyt5:
+      n_generate: 2
+      max_patch: 48
+      top_p: 0.8
+      top_k: 8
+      temperature: 2.0
+
+  medium:
+    description: "Useful intermediate run for sanity-checking model ranking."
+    n_generate: 20
+    max_test_tunes: 100
+    run_pretrained: true
+    quality_filter:
+      enabled: true
+      candidate_multiplier: 3
+      min_note_count: 80
+      min_pitch_range: 18
+      min_unique_pitches: 8
+    markov:
+      generate_max_len: 750
+      temperature: 0.9
+    lstm:
+      epochs: 10
+      hidden: 256
+      layers: 2
+      batch_size: 128
+      seq_len: 128
+      train_stride: 8
+      eval_stride: 4
+      lr: 0.002
+      generate_max_len: 900
+      temperature: 1.0
+    gpt2:
+      finetune_n: 100
+      epochs: 3
+      max_len: 256
+      batch_size: 2
+      grad_accum: 4
+      lr: 5.0e-5
+      generate: true
+      generate_max_new_tokens: 500
+      temperature: 0.95
+      top_p: 0.95
+      top_k: 50
+    tunesformer:
+      n_generate: 20
+      max_patch: 192
+      top_p: 0.8
+      top_k: 8
+      temperature: 1.1
+    melodyt5:
+      n_generate: 20
+      max_patch: 192
+      top_p: 0.8
+      top_k: 8
+      temperature: 1.5
+
+  full:
+    description: "Full GPU run for final report numbers."
+    n_generate: 50
+    max_test_tunes: null
+    run_pretrained: true
+    quality_filter:
+      enabled: true
+      candidate_multiplier: 2
+      min_note_count: 100
+      min_pitch_range: 20
+      min_unique_pitches: 8
+    markov:
+      generate_max_len: 900
+      temperature: 0.9
+    lstm:
+      epochs: 30
+      hidden: 512
+      layers: 3
+      batch_size: 128
+      seq_len: 128
+      train_stride: 1
+      eval_stride: 1
+      lr: 0.002
+      generate_max_len: 1200
+      temperature: 1.0
+    gpt2:
+      finetune_n: all
+      epochs: 10
+      max_len: 512
+      batch_size: 4
+      grad_accum: 2
+      lr: 5.0e-5
+      generate: true
+      generate_max_new_tokens: 700
+      temperature: 0.95
+      top_p: 0.95
+      top_k: 50
+    tunesformer:
+      n_generate: 50
+      max_patch: 192
+      top_p: 0.8
+      top_k: 8
+      temperature: 1.1
+    melodyt5:
+      n_generate: 50
+      max_patch: 192
+      top_p: 0.8
+      top_k: 8
+      temperature: 1.5

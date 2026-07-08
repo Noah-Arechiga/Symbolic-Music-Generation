@@ -1,0 +1,80 @@
+modes:
+  smoke:
+    description: "Local sanity check; trains tiny runs on CPU."
+    train_examples: 40
+    val_examples: 8
+    test_examples: 8
+    generator_epochs: 2
+    classifier_epochs: 3
+    gpt2_epochs: 1
+    melodyt5_epochs: 1
+    vae_epochs: 3
+    showcase_inputs: 1
+    generate_per_style: 3
+    batch_size: 8
+    classifier_batch_size: 32
+    gpt2_batch_size: 1
+    max_seq_len: 384
+    max_new_tokens: 180
+    transformer_dim: 128
+    transformer_layers: 2
+    transformer_heads: 4
+    transformer_ffn: 256
+    vae_hidden: 128
+    vae_latent: 32
+    # Smoke uses a tiny GPT-2-compatible checkpoint to verify the pipeline locally.
+    # Medium/full below use real "gpt2" as requested in the spec.
+    gpt2_model_name: "sshleifer/tiny-gpt2"
+    gpt2_max_train_examples: 12
+
+  medium:
+    description: "Kaggle T4 run."
+    train_examples: all
+    val_examples: all
+    test_examples: all
+    generator_epochs: 20
+    classifier_epochs: 30
+    gpt2_epochs: 3
+    melodyt5_epochs: 3
+    vae_epochs: 30
+    showcase_inputs: 5
+    generate_per_style: 20
+    batch_size: 32
+    classifier_batch_size: 64
+    gpt2_batch_size: 4
+    max_seq_len: 512
+    max_new_tokens: 256
+    transformer_dim: 256
+    transformer_layers: 4
+    transformer_heads: 4
+    transformer_ffn: 512
+    vae_hidden: 256
+    vae_latent: 64
+    gpt2_model_name: "gpt2"
+    gpt2_max_train_examples: all
+
+  full:
+    description: "Long full training run on Kaggle T4."
+    train_examples: all
+    val_examples: all
+    test_examples: all
+    generator_epochs: 50
+    classifier_epochs: 50
+    gpt2_epochs: 5
+    melodyt5_epochs: 5
+    vae_epochs: 60
+    showcase_inputs: 10
+    generate_per_style: 50
+    batch_size: 32
+    classifier_batch_size: 64
+    gpt2_batch_size: 4
+    max_seq_len: 512
+    max_new_tokens: 320
+    transformer_dim: 256
+    transformer_layers: 4
+    transformer_heads: 4
+    transformer_ffn: 512
+    vae_hidden: 256
+    vae_latent: 64
+    gpt2_model_name: "gpt2"
+    gpt2_max_train_examples: all

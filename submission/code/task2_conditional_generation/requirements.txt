@@ -1,0 +1,14 @@
+torch>=2.0.0
+transformers>=4.35.0
+accelerate
+numpy
+pandas
+matplotlib
+seaborn
+music21
+pretty_midi
+midiutil
+tqdm
+pyyaml
+python-Levenshtein
+scikit-learn

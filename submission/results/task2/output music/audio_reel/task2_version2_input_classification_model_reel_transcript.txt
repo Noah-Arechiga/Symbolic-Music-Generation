@@ -1,0 +1,26 @@
+Input seed
+  MIDI: kaggle_task2_v2_exact/task2_version2/runs/medium/generated/showcase/input_seed.mid
+  Classifier prediction: jig
+  Narration: Task two version two listening reel. The input seed is Donald Ian Rankine. It is in G major, six eight meter. The classifier prediction for the input is: jig. First, here is the input seed.
+
+Markov baseline
+  MIDI: kaggle_task2_v2_exact/task2_version2/runs/medium/generated/showcase/markov_baseline_from_seed.mid
+  Classifier prediction: jig
+  Narration: Model one: Markov baseline. Generated file: markov baseline from seed dot mid. Classifier prediction: jig. Here is the generated music.
+
+Scratch Transformer
+  MIDI: kaggle_task2_v2_exact/task2_version2/runs/medium/generated/showcase/scratch_transformer_from_seed.mid
+  Classifier prediction: jig
+  Narration: Model two: scratch transformer. Generated file: scratch transformer from seed dot mid. Classifier prediction: jig. Here is the generated music.
+
+GPT-2 fine tuned
+  MIDI: kaggle_task2_v2_exact/task2_version2/runs/medium/generated/showcase/gpt2_finetuned_from_seed.mid
+  Classifier prediction: jig
+  Narration: Model three: G P T two fine tuned. Generated file: G P T two fine tuned from seed dot mid. Classifier prediction: jig. Here is the generated music.
+
+VAE
+  MIDI: kaggle_task2_v2_exact/task2_version2/runs/medium/generated/showcase/vae_from_seed.mid
+  Classifier prediction: jig
+  Narration: Model four: variational autoencoder. Generated file: V A E from seed dot mid. Classifier prediction: jig. Here is the generated music.
+
+End of comparison reel.
